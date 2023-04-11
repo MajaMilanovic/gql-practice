@@ -23,10 +23,17 @@ const resolvers = {
       // trackAPI - lowercase here as it's the instance of our TrackAPI class extending RESTDataSource
       return dataSources.trackAPI.getTracksForHome();
     },
+    // get a single track by ID, for the track page
+    track: (_, { id }, { dataSources }) => {
+      return dataSources.trackAPI.getTrack(id);
+    },
   },
   Track: {
     author: (parent, _, { dataSources }) => {
       return dataSources.trackAPI.getAuthor(parent.authorId);
+    },
+    modules: ({ id }, _, { dataSources }) => {
+      return dataSources.trackAPI.getTrackModules(id);
     },
   },
 };

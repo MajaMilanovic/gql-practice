@@ -4,7 +4,7 @@ const { startStandaloneServer } = require("@apollo/server/standalone");
 // const { makeExecutableSchema } = require("@graphql-tools/schema");
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
-const TrackAPI = require("../datasources/track-api");
+const TrackAPI = require("./datasources/track-api");
 // const mocks = require("./mocks");
 
 /** NOTES:
