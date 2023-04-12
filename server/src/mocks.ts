@@ -1,4 +1,4 @@
-const mocks = {
+export const mocks = {
   Query: () => ({
     tracksForHome: () => [...new Array(6)],
   }),
@@ -18,5 +18,3 @@ const mocks = {
     modulesCount: () => 6,
   }),
 };
-
-module.exports = mocks;

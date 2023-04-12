@@ -1,4 +1,4 @@
-const gql = require("graphql-tag");
+import gql from "graphql-tag";
 
 /** NOTES:
  *  how to tell the GraphQL server what to retrieve when we query it?
@@ -6,7 +6,7 @@ const gql = require("graphql-tag");
  *  Instead, we define a special Query type.
  */
 
-const typeDefs = gql`
+export const typeDefs = gql`
   """
   The fields of Query type are entry points into the rest of our schema.
   These are the top-level fields that our client can query for
@@ -83,7 +83,6 @@ const typeDefs = gql`
     photo: String
   }
 `;
-module.exports = typeDefs;
 
 /** EXAMPLE:
  *  type Employee {

@@ -1,4 +1,4 @@
-const resolvers = {
+export const resolvers = {
   // try to keep resolver functions as thin as possible
   Query: {
     // returns an array of Tracks that will be used to populate
@@ -60,5 +60,3 @@ const resolvers = {
     },
   },
 };
-
-module.exports = resolvers;

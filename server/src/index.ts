@@ -1,10 +1,11 @@
-const { ApolloServer } = require("@apollo/server");
-const { startStandaloneServer } = require("@apollo/server/standalone");
+import { ApolloServer } from "@apollo/server";
+import { startStandaloneServer } from "@apollo/server/standalone";
 // const { addMocksToSchema } = require("@graphql-tools/mock");
 // const { makeExecutableSchema } = require("@graphql-tools/schema");
-const typeDefs = require("./schema");
-const resolvers = require("./resolvers");
-const TrackAPI = require("./datasources/track-api");
+// https://stackoverflow.com/questions/65873101/node-requires-file-extension-for-import-statement
+import { typeDefs } from "./schema.js";
+import { resolvers } from "./resolvers.js";
+import { TrackAPI } from "./datasources/track-api.js";
 // const mocks = require("./mocks");
 
 /** NOTES:
