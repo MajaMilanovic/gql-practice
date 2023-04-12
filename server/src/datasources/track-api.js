@@ -20,6 +20,11 @@ class TrackAPI extends RESTDataSource {
   getTrackModules(trackId) {
     return this.get(`track/${trackId}/modules`);
   }
+  // Mutation methods
+  incrementTrackViews(trackId) {
+    // we need to make an HTTP PATCH request, which we can do by callingthis.patch. This method is provided to us by the RESTDataSource class we inherited from.
+    return this.patch(`track/${trackId}/numberOfViews`);
+  }
 }
 
 module.exports = TrackAPI;
